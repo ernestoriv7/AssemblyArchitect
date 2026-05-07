@@ -1,0 +1,481 @@
++++LEVEL STARTS 00
+
+QUANTITY 17
+
+MSG 00
+ADDRESS 00
+MSG_END
+
+MSG 01
+Review the task specification before execution
+MSG_END
+
+MSG 02
+Objective: 
+ 
+Move items from the Input Buffer [ib]
+MSG_END
+
+MSG 03
+To the Output Buffer [ob]
+MSG_END
+
+MSG 04
+Values loaded from [ib] must be stored in a Register
+MSG_END
+
+MSG 05
+Select the MOV instruction
+MSG_END
+
+MSG 06
+Insert the instruction into the program sequence
+MSG_END
+
+MSG 07
+Select rax as the Destination Operand
+MSG_END
+
+MSG 08
+Select Input Buffer [ib] as the Source Operand
+MSG_END
+
+MSG 09
+Execute the instruction to inspect its behaviour
+MSG_END
+
+MSG 10
+The value was moved to rax but not to the Output Buffer [ob]
+MSG_END
+
+MSG 11
+Insert another MOV instruction into the program sequence
+MSG_END
+
+MSG 12
+Append the instruction to the current sequence
+MSG_END
+
+MSG 13
+Select Output Buffer [ob] as the Destination Operand
+MSG_END
+
+MSG 14
+Select rax as the Source Operand
+MSG_END
+
+MSG 15
+Initiate Program Execution
+MSG_END
+
+MSG 16
+Run completed
+         
+Proceed to the next stage
+MSG_END
+
++++LEVEL ENDS 00
+
++++LEVEL STARTS 01
+
+QUANTITY 8
+
+MSG 00
+ADDRESS 01
+MSG_END
+
+MSG 01
+Instructions order and operands can be modified
+MSG_END
+
+MSG 02
+Remove the final instruction from the execution sequence
+MSG_END
+
+MSG 03
+Extract the instruction from the program sequence to remove it
+MSG_END
+
+MSG 04
+Change the instruction Source Operand to update its behavior
+MSG_END
+
+MSG 05
+Set the Source Operand to [ib]
+MSG_END
+
+MSG 06
+Adjust instruction order so the second instruction executes first
+MSG_END
+
+MSG 07
+Initiate Program Execution
+MSG_END
+
++++LEVEL ENDS 01
+
++++LEVEL STARTS 02
+
+QUANTITY 12
+
+MSG 00
+ADDRESS 02
+MSG_END
+
+MSG 01
+Values retrieved from [ib] are consumed after a single read
+MSG_END
+
+MSG 02
+Register values are persistent across reads
+MSG_END
+
+MSG 03
+Insert the MOV instruction into the program sequence
+MSG_END
+
+MSG 04
+Insert the instruction into the program sequence
+MSG_END
+
+MSG 05
+Available operands are indicated during selection
+MSG_END
+
+MSG 06
+Select rax
+MSG_END
+
+MSG 07
+Only valid operand combinations are selectable
+MSG_END
+
+MSG 08
+Select [ib]
+MSG_END
+
+MSG 09
+Multiple 
+MOV [ob], rax 
+operations are required for correct execution
+MSG_END
+
+MSG 10
+Complete program sequence
+MSG_END
+
+MSG 11
+Right click a complete instruction to copy it
+MSG_END
+
++++LEVEL ENDS 02
+
++++LEVEL STARTS 03
+
+QUANTITY 2
+
+MSG 00
+ADDRESS 03
+MSG_END
+
+MSG 01
+Use available instruction behavior to complete the execution
+MSG_END
+
++++LEVEL ENDS 03
+
++++LEVEL STARTS 04
+
+QUANTITY 3
+
+MSG 00
+ADDRESS 04
+MSG_END
+
+MSG 01
+More registers are available for use
+MSG_END
+
+MSG 02
+Stepwise and fast execution modes are now available
+MSG_END
+
++++LEVEL ENDS 04
+
++++LEVEL STARTS 05
+
+QUANTITY 4
+
+MSG 00
+ADDRESS 05
+MSG_END
+
+MSG 01
+New instruction available: 
+ 
+ADD
+MSG_END
+
+MSG 02
+ADD OP1, OP2
+ 
+Adds OP1 to OP2, stores the result in OP1
+MSG_END
+
+MSG 03
+Execution now supports ADD and MOV instructions
+MSG_END
+
++++LEVEL ENDS 05
+
++++LEVEL STARTS 06
+
+QUANTITY 3
+
+MSG 00
+ADDRESS 06
+MSG_END
+
+MSG 01
+MOV and ADD allow both operands to be registers
+MSG_END
+
+MSG 02
+MOV rbx, rax
+ 
+Copies the value from rax into rbx
+MSG_END
+
++++LEVEL ENDS 06
+
++++LEVEL STARTS 07
+
+QUANTITY 3
+
+MSG 00
+ADDRESS 07
+MSG_END
+
+MSG 01
+MOV and ADD allow both operands to reference the same register
+MSG_END
+
+MSG 02
+ADD rax, rax
+ 
+Adds rax to itself and stores the result in rax
+MSG_END
+
++++LEVEL ENDS 07
+
++++LEVEL STARTS 08
+
+QUANTITY 6
+
+MSG 00
+ADDRESS 08
+MSG_END
+
+MSG 01
+Execution is limited to three instructions
+MSG_END
+
+MSG 02
+JMP alters the execution flow by transferring control to a different instruction
+MSG_END
+
+MSG 03
+Insert the JMP instruction into the program sequence
+MSG_END
+
+MSG 04
+Append the JMP instruction to the end of the execution sequence
+MSG_END
+
+MSG 05
+Set the JMP destination to the beginning of the execution sequence
+MSG_END
+
++++LEVEL ENDS 08
+
++++LEVEL STARTS 09
+
+QUANTITY 1
+
+MSG 00
+ADDRESS 09
+MSG_END
+
++++LEVEL ENDS 09
+
++++LEVEL STARTS 10
+
+QUANTITY 5
+
+MSG 00
+ADDRESS 0A
+MSG_END
+
+MSG 01
+An additional section has been enabled
+MSG_END
+
+MSG 02
+Immediate values are available for selection
+MSG_END
+
+MSG 03
+Immediate operands are read-only source operands
+MSG_END
+
+MSG 04
+Usage examples:
+ 
+MOV rax, 5
+ADD rbx, 10
+MSG_END
+
++++LEVEL ENDS 10
+
++++LEVEL STARTS 11
+
+QUANTITY 1
+
+MSG 00
+ADDRESS 0B
+MSG_END
+
++++LEVEL ENDS 11
+
++++LEVEL STARTS 12
+
+QUANTITY 1
+
+MSG 00
+ADDRESS 0C
+MSG_END
+
++++LEVEL ENDS 12
+
++++LEVEL STARTS 13
+
+QUANTITY 7
+
+MSG 00
+ADDRESS 0D
+MSG_END
+
+MSG 01
+CMP and JE instructions are now available
+MSG_END
+
+MSG 02
+CMP compares two operands
+ 
+Examples:
+CMP rax, rbx
+CMP rax, 4
+MSG_END
+
+MSG 03
+CMP sets the Zero Flag (ZF) when both operands are equal
+MSG_END
+
+MSG 04
+CMP clears the Zero Flag (ZF) when the operands differ
+MSG_END
+
+MSG 05
+JE jumps when ZF is set
+ 
+Otherwise, execution continues
+MSG_END
+
+MSG 06
+Correct execution requires the use of CMP and JE
+MSG_END
+
++++LEVEL ENDS 13
+
++++LEVEL STARTS 14
+
+QUANTITY 5
+
+MSG 00
+ADDRESS 0E
+MSG_END
+
+MSG 01
+JNE instruction is now available
+MSG_END
+
+MSG 02
+JNE jumps when ZF is clear
+ 
+Otherwise, execution continues
+MSG_END
+
+MSG 03
+CMP clears the Zero Flag (ZF) when the operands differ
+MSG_END
+
+MSG 04
+CMP sets the Zero Flag (ZF) when both operands are equal
+MSG_END
+
++++LEVEL ENDS 14
+
++++LEVEL STARTS 15
+
+QUANTITY 1
+
+MSG 00
+ADDRESS 0F
+MSG_END
+
++++LEVEL ENDS 15
+
++++LEVEL STARTS 16
+
+QUANTITY 1
+
+MSG 00
+ADDRESS 10
+MSG_END
+
++++LEVEL ENDS 16
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
