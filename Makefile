@@ -2,8 +2,8 @@
 # Project configuration
 ############################
 
-APP_NAME = AssemblyGame
-EXEC     = assemblygame
+APP_NAME = AssemblyArchitect
+EXEC     = assemblyArchitect
 
 S_DIR = source
 B_DIR = .
@@ -142,12 +142,18 @@ app: build
 	
 	@echo "App bundle created: $(APP_BUNDLE)"
 
+	@echo "Signing app bundle..."
+	codesign --deep --force --sign - $(APP_BUNDLE)
+
+	@echo "Removing quarantine attribute..."
+	xattr -dr com.apple.quarantine $(APP_BUNDLE)
+
 ############################
 # Clean
 ############################
 
 clean:
 	rm -rf $(EXEC) $(APP_BUNDLE)
-	rm -rf assemblygame*
+	rm -rf assemblyArchitect*
 	rm -f source/.*.swp
 	rm -f data/.*.swp
